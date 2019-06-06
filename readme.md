@@ -12,11 +12,6 @@ ToDo:
 
 ## above-the-fold content
 
-(big image)
-
-Big header:
-Watch your energy use and save!
-
 Sub-header:
 At-a-glance or in-depth monitoring for everyone
 

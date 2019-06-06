@@ -63,12 +63,13 @@ main {
   min-height: 50vh;
   color: var(--logoGrey);
 }
-main h1 {
+main hgroup {
   background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url('../images/leicester-schools.png');
   background-size: cover;
   height: 30vw;
   padding-top: 2em;
   text-align: center;
+  font-size: 125%;
 }
 
 footer {
