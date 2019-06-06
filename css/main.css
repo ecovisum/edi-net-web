@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Dosis;
+  src: url(fonts/Dosis-Medium.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/RobotoSlab-Light.ttf);
+}
+@font-face {
+  font-family: RobotoReg;
+  src: url(fonts/RobotoSlab-Regular.ttf);
+}
+
+html {
+  --logoRed: rgb(237, 27, 36);
+  --logoGreen: rgb(65, 173, 72);
+  --logoBlue: rgb(0, 112, 175);
+  --logoGrey: rgb(88, 89, 91);
+  --darkGrey: #888;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+}
+h2, h3, h4, h5, nav {
+  font-family: Dosis, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.logo {
+  height: 2.5em;
+  margin-top: 4px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  padding: .5em;
+  width: 8em;
+  font-size: .9em;
+  margin: .25em 0;
+  color: #fff;
+  text-decoration: none;
+}
+.red { background: var(--logoRed); }
+.green { background: var(--logoGreen ); }
+.blue { background: var(--logoBlue); }
+.grey { background: var(--logoGrey); }
+
+main {
+  min-height: 50vh;
+}
+
+footer {
+  /* use grid layout instead */
+  position: absolute;
+  bottom: 0;
+  height: 8em;
+  padding: .5em;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background: var(--darkGrey);
+}
+.logo-eu {
+  height: 3em;
+}
+
+@media screen and (min-width: 580px) {
+  .logo {
+    height: 4em;
+  }
+  nav {
+    flex-direction: row;
+  }
+  nav a {
+    padding: 3em .5em .5em;
+    margin: 0 0 0 .5em;
+    box-sizing: border-box;
+  }
+}
