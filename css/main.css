@@ -61,6 +61,14 @@ nav a {
 
 main {
   min-height: 50vh;
+  color: var(--logoGrey);
+}
+main h1 {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url('../images/leicester-schools.png');
+  background-size: cover;
+  height: 30vw;
+  padding-top: 2em;
+  text-align: center;
 }
 
 footer {
@@ -75,6 +83,9 @@ footer {
   color: #fff;
   background: var(--darkGrey);
   font-size: .75em;
+}
+footer p {
+  padding: 0 10%;
 }
 .logo-eu {
   height: 3em;
