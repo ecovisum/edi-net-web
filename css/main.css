@@ -27,12 +27,11 @@ body {
 
 body, main {
   margin: 0;
-  font-family: Dosis, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1em;
 }
 h1, h2, h3, nav {
-  font-family: Roboto, sans-serif
-  Dosis, sans-serif;
+  font-family: Dosis, sans-serif;
 }
 
 header {
@@ -75,6 +74,7 @@ footer {
   text-align: center;
   color: #fff;
   background: var(--darkGrey);
+  font-size: .75em;
 }
 .logo-eu {
   height: 3em;
