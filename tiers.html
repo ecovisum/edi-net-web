@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  NOTE: look at split-scale sliders for more bottom-end control logarithmic-style
+  https://legacy-documentation.concrete5.org/tutorials/create-a-split-scale-slider-for-greater-range
+-->
+  <meta charset="UTF-8">
+  <title>Ecovisum Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="styles.css">
+  <style media="screen">
+    #alternativeTiers {
+      background: hsl(200, 80%, 10%);
+    }
+    #alternativeTiers > p {
+      color: hsl(200, 80%, 90%);
+
+    }
+    .importantInformation {
+      padding: 0.5em;
+      font-size: 1.4em;
+      text-align: center;
+    }
+    input#altBuildings::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+    input#altBuildings::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    input#altBuildings {
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      width: 75%;
+      padding: 1em;
+      background: hsl(200, 100%, 90%);
+      border-radius: 1.5em;
+      border: solid 1px hsl(200, 50%, 50%)
+    }
+    input#altBuildings:focus {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+
+    /* Special styling for WebKit/Blink */
+    input#altBuildings::-webkit-slider-thumb {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+      -webkit-appearance: none;
+      border: 2px solid hsl(200, 50%, 10%);
+      height: 2.5em;
+      margin-top: -1.1em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      width: 1.25em;
+      border-radius: 0.5em;
+      background: hsl(200, 50%, 90%);
+      cursor: pointer;
+      box-shadow: 1px 1px 1px hsl(200, 50%, 20%), 0px 0px 1px hsl(200, 50%, 30%); /* Add cool effects to your sliders! */
+    }
+
+    input#altBuildings::-webkit-slider-runnable-track {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+      width: 100%;
+      height: 0.25em;
+      cursor: pointer;
+      background: hsl(200, 50%, 50%);
+    }
+  </style>
+<body>
+
+
+    <!-- <section id="alternativePrice">
+    </section> -->
+
+    <section id="alternativeTiers">
+      <p class="importantInformation">
+        Calculate your price by selecting how many buildings you would like to include.
+      </p>
+      <p class="importantInformation">
+        <input id="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
+        <datalist id="tickmarks">
+          <option value="5" label="10">
+          <option value="10" label="10">
+          <option value="50" label="50">
+          <option value="150" label="150">
+          <option value="500" label="500">
+        </datalist><br>
+        <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
+        <span id="altExtras"></span>
+      </p>
+    </section>
+
+
+
+
+  <template id="my-tiers">
+    <style media="screen">
+      ul {
+        padding: 0.5em;
+        display: inline-block;
+        width: calc(100% - 4em);
+        text-align: center;
+        margin: 0 1em;
+      }
+    </style>
+    <ul>
+      <slot name="tiers"><tier-item></tier-item></slot>
+    </ul>
+  </template>
+
+  <template id="simple-tier">
+    <style media="screen">
+      li {
+        list-style: none;
+        margin: 0.25em;
+        min-width: 25%;
+        background: hsl(200, 50%, 80%);
+        display: inline-block;
+        text-align: center;
+        transition: 0.25s;
+        border: 5px solid hsl(200, 100%, 20%);
+        border-radius: 0.5em;
+      }
+      li p {
+        padding-bottom: 1em;
+      }
+      li:hover {
+        background: hsl(200, 100%, 80%);
+      }
+      li:hover h2 {
+        background: hsl(200, 100%, 60%);
+      }
+      h2 {
+        margin: 0;
+        padding: 0.25em;
+        background: hsl(200, 50%, 60%);
+        border-top-left-radius: 0.15em;
+        border-top-right-radius: 0.15em;
+      }
+      :host(.highlight) li {
+        border: 5px solid hsl(200, 100%, 60%);
+        background: hsl(200, 100%, 10%);
+        color: hsl(200, 100%, 90%);
+      }
+      :host(.highlight) li h2 {
+        background: hsl(200, 100%, 20%);
+      }
+    </style>
+    <li>
+      <h2><slot name="name">Nothing</slot></h2>
+      <p>
+        <strong>€<slot name="price">0</slot></span></strong><br>
+      </p>
+      <p>
+        <span>Includes <slot name="buildings">no</slot> buildings</span><br>
+        <small>+€<slot name="extra">0</slot> per additional building</small>
+      </p>
+    </li>
+
+  </template>
+
+  <script src="js/tiers.js"></script>
+  <script src="js/pricing.js"></script>
+
+  <script type="text/javascript">
+    const altShowPrice = ev => {
+      let tier = getTier(ev.target.value);
+      let extra = Math.max(0, ev.target.value - tier.buildings);
+      altBldgs.innerHTML = ev.target.value;
+      altPrice.innerHTML = tier.price;
+      if (extra) {
+        altExtras.innerHTML = ` + €${tier.extra} x ${extra} = €${getPrice(ev.target.value)}`
+      } else {
+        altExtras.innerHTML = "";
+      }
+      [...document.querySelectorAll("[id^=altTier]")].forEach(el=>{el.classList.remove('highlight');})
+      document.getElementById(`altTier${tier.id}`).classList.add('highlight');
+    }
+    altBuildings.addEventListener("input", altShowPrice);
+  </script>
+
+  <script type="text/javascript">
+    var input_event = new Event('input');
+
+    class TierItem extends HTMLElement {
+      constructor() {
+        super();
+        let template = document.getElementById('simple-tier');
+        let templateContent = template.content;
+        const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
+      }
+    }
+
+    class TierList extends HTMLElement {
+      constructor() {
+        super();
+        let template = document.getElementById('my-tiers');
+        let templateContent = template.content;
+        const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
+      }
+    }
+
+    const createSlot = (name, value) => {
+      let slot = document.createElement('span');
+      slot.setAttribute('slot', name);
+      slot.innerHTML = value;
+      return slot;
+    }
+
+    customElements.define('tier-item', TierItem)
+    customElements.define('tier-list', TierList)
+
+
+    let myList = document.createElement('tier-list');
+    let mySlot = document.createElement('span');
+    mySlot.setAttribute('slot', 'tiers');
+
+    tiers.forEach(t => {
+      let myItem = document.createElement('tier-item');
+      myItem.id = `altTier${t.id}`
+      myItem.appendChild(createSlot('name', t.tier));
+      myItem.appendChild(createSlot('buildings', t.buildings));
+      myItem.appendChild(createSlot('price', t.price));
+      myItem.appendChild(createSlot('extra', t.extra));
+      myItem.addEventListener('click', ev => {
+        altBuildings.value = t.buildings;
+        altBuildings.dispatchEvent(input_event);
+        altBuildings.focus();
+      });
+      mySlot.appendChild(myItem);
+    });
+    myList.appendChild(mySlot);
+    alternativeTiers.appendChild(myList);
+  </script>
+
+</body>
+</html>

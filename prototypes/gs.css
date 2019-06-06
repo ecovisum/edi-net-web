@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+}
+main {
+  margin: 0;
+  background: white;
+}
+h2, h3, h4, h5, nav {
+  font-family: Dosis, sans-serif;
+}
+header {
+  padding: 1em;
+  font-family: "sans-serif";
+  background: hsl(200, 100%, 100%);
+  background-image: url("./gs-images/net.png");
+  background-blend-mode: exclusion;
+  background-size: 1000px;
+  /* background-position: bottom; */
+  border-bottom: 2px solid hsl(200, 0%, 50%);
+}
+header nav {
+  text-align: right;
+}
+header nav a {
+  color: white;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+.red {
+  background-color: #ED1B24;
+}
+.green {
+  background-color: #41AD48;
+}
+.blue {
+    background-color: #0070AF;
+}
+
+header h1 {
+  margin-left: 2%;
+}
+p {
+  font-family: "Roboto Slab",helvetica,serif;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+.decorated {
+  color: hsl(200, 0%, 100%);
+  background: hsl(200, 100%, 20%);
+  background-image: url("./gs-images/web.png");
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.jumbo {
+  font-size: 1.2em;
+  padding: 1em;
+  text-align: center;
+}
+.jumbo h1, .jumbo h2, .jumbo h3, .jumbo h4 {
+  margin: 0;
+}
+
+main img {
+  border: 1px solid hsl(200,0%,0%);
+  box-sizing: border-box;
+}
+
+main img.lefted {
+  margin-right: 1em;
+}
+
+.full-width {
+  width: 100%;
+}
+.most-width {
+  width: 80%;
+}
+
+.lefted {
+  width: 35%;
+  float: left;
+}
+
+.righted {
+  width: 50%;
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+@media (min-width: 400px) {
+
+  header {
+    border-bottom: 2px solid hsl(200, 0%, 50%);
+  }
+  main {
+    font-size: 1.2em;
+  }
+  .jumbo {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 500px) {
+  main {
+    margin: 0 1em;
+  }
+}
+@media (min-width: 800px) {
+  main {
+    margin: 0;
+  }
+  .center {
+    margin: 2em auto;
+    width: 80%;
+  }
+  .jumbo {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    background-size: cover;
+  }
+  .center {
+    width: 70%;
+  }
+}
