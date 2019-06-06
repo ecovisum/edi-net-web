@@ -17,6 +17,12 @@ html {
   --logoBlue: rgb(0, 112, 175);
   --logoGrey: rgb(88, 89, 91);
   --darkGrey: #888;
+  --lightGrey: #ddd;
+}
+
+body {
+  background: url('../images/order4-all-880-trimmed-reverse.png');
+  background-size: cover;
 }
 
 body, main {
@@ -85,5 +91,8 @@ footer {
     padding: 2.5em .5em .5em;
     margin: 0 0 0 .5em;
     box-sizing: border-box;
+  }
+  nav a:hover {
+    color: var(--lightGrey);
   }
 }
