@@ -9,6 +9,7 @@ ToDo:
 - [ ] move and prepare content from prototypes
 - [x] copy EDI-Net menu styles exactly
 - [ ] use grid layout to position main content blocks
+- [ ] fix mobile vertical alignment and spacing
 
 ## above-the-fold content
 
