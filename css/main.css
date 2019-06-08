@@ -1,3 +1,4 @@
+/* GLOBALS AND UTILITIES */
 @font-face {
   font-family: Dosis;
   src: url(../fonts/Dosis-Medium.ttf);
@@ -16,10 +17,21 @@ html {
   --logoGreen: rgb(65, 173, 72);
   --logoBlue: rgb(0, 112, 175);
   --logoGrey: rgb(88, 89, 91);
-  --darkGrey: #888;
+  --midGrey: #888;
   --lightGrey: #ddd;
 }
+.red { background: var(--logoRed); }
+.green { background: var(--logoGreen ); }
+.blue { background: var(--logoBlue); }
+.grey { background: var(--logoGrey); }
 
+.three-box-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* BASICS AND MOBILE */
 body {
   background: url('../images/order4-all-880-trimmed-reverse.png');
   background-size: cover;
@@ -54,43 +66,61 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-.red { background: var(--logoRed); }
-.green { background: var(--logoGreen ); }
-.blue { background: var(--logoBlue); }
-.grey { background: var(--logoGrey); }
 
 main {
   min-height: 50vh;
   color: var(--logoGrey);
 }
+/*
+  multiple background images to create an overlay
+  https://stackoverflow.com/q/36679649/123033
+*/
 main hgroup {
   background: linear-gradient(to bottom,
-    rgba(255, 255, 255, .8),
-    rgba(255, 255, 255, .8)),
+    rgba(255, 255, 255, .72),
+    rgba(255, 255, 255, .72)),
     url('../images/edi-net-people.jpg');
   background-size: cover;
   height: 30vw;
   padding-top: 4em;
   text-align: center;
-  font-size: 125%;
+  font-size: 80%;
   transition: all 1s;
 }
 hgroup h1 {
   box-sizing: border-box;
-  padding-top: 2em;
+  margin: 10vw 0 0;
 }
+
+.three-box-flex section {
+  background: rgba(255, 255, 255, .6);
+  width: 90%;
+  padding: 1em;
+  border: 2px solid var(--midGrey);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+summary {
+  outline: none;
+}
+summary h2 {
+  display: inline-block;
+  margin: 0;
+  width: 90%;
+}
+
+
 
 footer {
   /* use grid layout instead */
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  margin-top: 1em;
   height: 8em;
   padding: .5em;
   box-sizing: border-box;
   text-align: center;
   color: #fff;
-  background: var(--darkGrey);
+  background: var(--logoGrey);
   font-size: .75em;
 }
 footer p {
@@ -115,13 +145,28 @@ footer p {
   nav a:hover {
     color: var(--lightGrey);
   }
+  main hgroup {
+    font-size: 125%;
+  }
+  hgroup h1 {
+    margin-top: 12vw;
+  }
   main hgroup:hover {
     background: linear-gradient(to bottom,
       rgba(255, 255, 255, .1),
       rgba(255, 255, 255, .1)),
       url('../images/edi-net-people.jpg');
     background-size: cover;
+    font-size: 135%;
     color: #fff;
     text-shadow: 3px 3px 6px #666;
+  }
+  .three-box-flex {
+    justify-content: space-around;
+    flex-direction: row;
+    justify-items: start;
+  }
+  .three-box-flex section {
+    width: 30%;
   }
 }
