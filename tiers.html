@@ -72,29 +72,26 @@
 <body>
 
 
-    <!-- <section id="alternativePrice">
-    </section> -->
+  <!-- <section id="alternativePrice">
+  </section> -->
 
-    <section id="alternativeTiers">
-      <p class="importantInformation">
-        Calculate your price by selecting how many buildings you would like to include.
-      </p>
-      <p class="importantInformation">
-        <input id="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
-        <datalist id="tickmarks">
-          <option value="5" label="10">
-          <option value="10" label="10">
-          <option value="50" label="50">
-          <option value="150" label="150">
-          <option value="500" label="500">
-        </datalist><br>
-        <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
-        <span id="altExtras"></span>
-      </p>
-    </section>
-
-
-
+  <section id="alternativeTiers">
+    <p class="importantInformation">
+      Calculate your price by selecting how many buildings you would like to include.
+    </p>
+    <p class="importantInformation">
+      <input id="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
+      <datalist id="tickmarks">
+        <option value="5" label="10">
+        <option value="10" label="10">
+        <option value="50" label="50">
+        <option value="150" label="150">
+        <option value="500" label="500">
+      </datalist><br>
+      <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
+      <span id="altExtras"></span>
+    </p>
+  </section>
 
   <template id="my-tiers">
     <style media="screen">
@@ -164,77 +161,6 @@
 
   <script src="js/tiers.js"></script>
   <script src="js/pricing.js"></script>
-
-  <script type="text/javascript">
-    const altShowPrice = ev => {
-      let tier = getTier(ev.target.value);
-      let extra = Math.max(0, ev.target.value - tier.buildings);
-      altBldgs.innerHTML = ev.target.value;
-      altPrice.innerHTML = tier.price;
-      if (extra) {
-        altExtras.innerHTML = ` + €${tier.extra} x ${extra} = €${getPrice(ev.target.value)}`
-      } else {
-        altExtras.innerHTML = "";
-      }
-      [...document.querySelectorAll("[id^=altTier]")].forEach(el=>{el.classList.remove('highlight');})
-      document.getElementById(`altTier${tier.id}`).classList.add('highlight');
-    }
-    altBuildings.addEventListener("input", altShowPrice);
-  </script>
-
-  <script type="text/javascript">
-    var input_event = new Event('input');
-
-    class TierItem extends HTMLElement {
-      constructor() {
-        super();
-        let template = document.getElementById('simple-tier');
-        let templateContent = template.content;
-        const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
-      }
-    }
-
-    class TierList extends HTMLElement {
-      constructor() {
-        super();
-        let template = document.getElementById('my-tiers');
-        let templateContent = template.content;
-        const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
-      }
-    }
-
-    const createSlot = (name, value) => {
-      let slot = document.createElement('span');
-      slot.setAttribute('slot', name);
-      slot.innerHTML = value;
-      return slot;
-    }
-
-    customElements.define('tier-item', TierItem)
-    customElements.define('tier-list', TierList)
-
-
-    let myList = document.createElement('tier-list');
-    let mySlot = document.createElement('span');
-    mySlot.setAttribute('slot', 'tiers');
-
-    tiers.forEach(t => {
-      let myItem = document.createElement('tier-item');
-      myItem.id = `altTier${t.id}`
-      myItem.appendChild(createSlot('name', t.tier));
-      myItem.appendChild(createSlot('buildings', t.buildings));
-      myItem.appendChild(createSlot('price', t.price));
-      myItem.appendChild(createSlot('extra', t.extra));
-      myItem.addEventListener('click', ev => {
-        altBuildings.value = t.buildings;
-        altBuildings.dispatchEvent(input_event);
-        altBuildings.focus();
-      });
-      mySlot.appendChild(myItem);
-    });
-    myList.appendChild(mySlot);
-    alternativeTiers.appendChild(myList);
-  </script>
 
 </body>
 </html>
