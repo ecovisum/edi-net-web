@@ -27,7 +27,7 @@ const altShowPrice = ev => {
 }
 altBuildings.addEventListener("input", altShowPrice);
 
-var input_event = new Event('input');
+const inputEvent = new Event('input');
 
 class TierItem extends HTMLElement {
   constructor() {
@@ -71,10 +71,10 @@ tiers.forEach(t => {
   myItem.appendChild(createSlot('extra', t.extra));
   myItem.addEventListener('click', ev => {
     altBuildings.value = t.buildings;
-    altBuildings.dispatchEvent(input_event);
+    altBuildings.dispatchEvent(inputEvent);
     altBuildings.focus();
   });
   mySlot.appendChild(myItem);
 });
 myList.appendChild(mySlot);
-alternativeTiers.appendChild(myList);
+tierPricing.appendChild(myList);
