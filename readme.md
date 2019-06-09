@@ -2,8 +2,10 @@
 
 ToDo:
 
-- [ ] integrate tiers and style
-- [ ] edit/move remaining content from prototype
+- [ ] edit/move last bit of content from prototype
+- [ ] flesh our sub-sections and add Graeme's images
+- [ ] add sub-navigation for this SPA
+- [x] integrate tiers and style
 - [x] create a white/pale background with magic squares app
 - [x] set up basic above-the-fold content
 - [x] move/create EDI-Net styles to match original

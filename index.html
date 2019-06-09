@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDI-Net: in-depth energy monitoring at a glance</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tiers.css">
 </head>
 
 <body>
@@ -64,6 +65,26 @@
         Enabling building users to engage with their own building energy performance and to actively collaborate with energy management teams, provides a pathway to developing a more integrated, transparent and responsoive energy management function. This can significantly increase the capacity of public authorities to deliver a realistic sustainable energy policy—a timely opportunity to respond to the call for urgent action on climate change.
       </p>
     </section>
+
+    <section id="tierPricing" style="text-align: center;">
+      <h2>Use the slider to select your base plan and price for extra buildings:</h2>
+
+      <div class="importantInformation">
+        <input id="altBuildings" class="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
+        <datalist id="tickmarks">
+          <option value="5" label="10">
+          <option value="10" label="10">
+          <option value="50" label="50">
+          <option value="150" label="150">
+          <option value="500" label="500">
+        </datalist>
+        <div>
+          <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
+          <span id="altExtras"></span>
+        </div>
+      </div>
+    </section>
+
   </main>
   <!-- edit this: -->
 
@@ -71,6 +92,71 @@
     <img class="logo-eu" src="images/eu-flag-logo.png" alt="European flag logo">
     <p>This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 695916.</p>
   </footer>
+
+  <template id="my-tiers">
+    <style media="screen">
+      ul {
+        padding: 0.5em;
+        display: inline-block;
+        width: calc(100% - 4em);
+        text-align: center;
+        margin: 0 1em;
+      }
+    </style>
+    <ul>
+      <slot name="tiers"><tier-item></tier-item></slot>
+    </ul>
+  </template>
+
+  <template id="simple-tier">
+    <style media="screen">
+      li {
+        list-style: none;
+        margin: 0.25em;
+        min-width: 25%;
+        background: var(--lightGrey);
+        display: inline-block;
+        text-align: center;
+        transition: 0.25s;
+        border: 2px solid var(--logoGrey);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      li p {
+        padding-bottom: 1em;
+      }
+      li:hover {
+        background: #fff;
+      }
+      h2 {
+        margin: 0;
+        padding: 0.25em;
+        background: var(--logoGrey);
+        color: var(--lightGrey);
+      }
+      :host(.highlight) li {
+        background: var(--logoGrey);
+        color: #fff;
+      }
+      :host(.highlight) li h2 {
+        background: var(--logoGreen);
+      }
+    </style>
+
+    <li>
+      <h2><slot name="name">Nothing</slot></h2>
+      <p>
+        <strong>€<slot name="price">0</slot></span></strong><br>
+      </p>
+      <p>
+        <span>Includes <slot name="buildings">no</slot> buildings</span><br>
+        <small>+€<slot name="extra">0</slot> per additional building</small>
+      </p>
+    </li>
+  </template>
+
+  <script src="js/tiers.js"></script>
+  <script src="js/pricing.js"></script>
 
 </body>
 </html>

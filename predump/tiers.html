@@ -9,30 +9,28 @@
   <title>Ecovisum Ltd.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/tiers.css">
 <body>
 
-
-  <!-- <section id="alternativePrice">
-  </section> -->
-
-  <section id="alternativeTiers">
-    <p class="importantInformation">
-      Calculate your price by selecting how many buildings you would like to include.
+  <section id="tierPricing" style="text-align: center;">
+    <p>
+      Use the slider to select your base plan and price for extra buildings:
     </p>
-    <p class="importantInformation">
-      <input id="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
+    <div class="importantInformation">
+      <input id="altBuildings" class="altBuildings" type="range" value="0" min="0" max="800" list="tickmarks">
       <datalist id="tickmarks">
         <option value="5" label="10">
         <option value="10" label="10">
         <option value="50" label="50">
         <option value="150" label="150">
         <option value="500" label="500">
-      </datalist><br>
-      <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
-      <span id="altExtras"></span>
-    </p>
+      </datalist>
+      <div>
+        <span id="altBldgs">0</span> <span>buildings</span> = <span>€</span><span id="altPrice">0</span>
+        <span id="altExtras"></span>
+      </div>
+    </div>
   </section>
 
   <template id="my-tiers">
@@ -56,36 +54,32 @@
         list-style: none;
         margin: 0.25em;
         min-width: 25%;
-        background: hsl(200, 50%, 80%);
+        background: var(--lightGrey);
         display: inline-block;
         text-align: center;
         transition: 0.25s;
-        border: 5px solid hsl(200, 100%, 20%);
-        border-radius: 0.5em;
+        border: 2px solid var(--logoGrey);
+        border-radius: 4px;
+        overflow: hidden;
       }
       li p {
         padding-bottom: 1em;
       }
       li:hover {
-        background: hsl(200, 100%, 80%);
-      }
-      li:hover h2 {
-        background: hsl(200, 100%, 60%);
+        background: #fff;
       }
       h2 {
         margin: 0;
         padding: 0.25em;
-        background: hsl(200, 50%, 60%);
-        border-top-left-radius: 0.15em;
-        border-top-right-radius: 0.15em;
+        background: var(--logoGrey);
+        color: var(--lightGrey);
       }
       :host(.highlight) li {
-        border: 5px solid hsl(200, 100%, 60%);
-        background: hsl(200, 100%, 10%);
-        color: hsl(200, 100%, 90%);
+        background: var(--logoGrey);
+        color: #fff;
       }
       :host(.highlight) li h2 {
-        background: hsl(200, 100%, 20%);
+        background: var(--logoGreen);
       }
     </style>
 
