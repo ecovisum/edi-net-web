@@ -13,15 +13,6 @@ ToDo:
 - [x] copy EDI-Net menu styles exactly
 - [x] fix mobile vertical alignment and spacing
 
-## above-the-fold content
-
-Sub-header:
-At-a-glance or in-depth monitoring for everyone
-
-How many buildings do you want to watch:
-
-(slider and costs)
-
 ## Content to decide on later
 
 - privacy policy and legal docs
