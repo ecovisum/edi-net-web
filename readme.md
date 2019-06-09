@@ -2,14 +2,13 @@
 
 ToDo:
 
-- [x] create a white/pale background with magic squares app
 - [ ] integrate tiers and style
+- [ ] edit/move remaining content from prototype
+- [x] create a white/pale background with magic squares app
 - [x] set up basic above-the-fold content
 - [x] move/create EDI-Net styles to match original
-- [ ] move and prepare content from prototypes
 - [x] copy EDI-Net menu styles exactly
-- [ ] use grid layout to position main content blocks
-- [ ] fix mobile vertical alignment and spacing
+- [x] fix mobile vertical alignment and spacing
 
 ## above-the-fold content
 

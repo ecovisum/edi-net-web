@@ -29,6 +29,10 @@ html {
 .blue-text { color: var(--logoBlue); }
 .grey-text { color: var(--logoGrey); }
 
+p {
+  line-height: 1.75em
+}
+
 .three-box-flex {
   display: flex;
   flex-direction: column;
@@ -105,7 +109,7 @@ hgroup p {
 
 main > section {
   box-sizing: border-box;
-  padding: 0 1.25em;
+  padding: 0 1.5em;
 }
 
 .three-box-flex section {
@@ -125,7 +129,7 @@ summary h2 {
   display: inline-block;
   margin: 0;
   width: 90%;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 footer {
