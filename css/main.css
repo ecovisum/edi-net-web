@@ -73,7 +73,6 @@ nav {
 nav a {
   padding: .5em;
   width: 8em;
-  margin: .25em 0;
   color: #fff;
   text-decoration: none;
 }
@@ -135,7 +134,7 @@ footer {
   /* use grid layout instead? */
   margin-top: 1em;
   height: auto;
-  padding: .5em;
+  padding: 1em .5em .5em;
   box-sizing: border-box;
   text-align: center;
   color: #fff;
@@ -143,7 +142,7 @@ footer {
   font-size: .75em;
 }
 footer p {
-  padding: 0 5%;
+  margin: .25em 5% .5em;
 }
 footer .logo-eu {
   height: 3.5em;
