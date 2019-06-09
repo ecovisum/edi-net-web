@@ -24,11 +24,18 @@ html {
 .green { background: var(--logoGreen ); }
 .blue { background: var(--logoBlue); }
 .grey { background: var(--logoGrey); }
+.red-text { color: var(--logoRed); }
+.green-text { color: var(--logoGreen ); }
+.blue-text { color: var(--logoBlue); }
+.grey-text { color: var(--logoGrey); }
 
 .three-box-flex {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+}
+.show-big {
+  display: none;
 }
 
 /* BASICS AND MOBILE */
@@ -42,7 +49,7 @@ body, main {
   font-family: Roboto, sans-serif;
   font-size: 1em;
 }
-h1, h2, h3, nav {
+h1, h2, h3, hgroup, nav {
   font-family: Dosis, sans-serif;
 }
 
@@ -67,29 +74,38 @@ nav a {
   text-decoration: none;
 }
 
-main {
-  min-height: 50vh;
-  color: var(--logoGrey);
-}
 /*
   multiple background images to create an overlay
   https://stackoverflow.com/q/36679649/123033
 */
-main hgroup {
+hgroup {
   background: linear-gradient(to bottom,
     rgba(255, 255, 255, .72),
     rgba(255, 255, 255, .72)),
     url('../images/edi-net-people.jpg');
   background-size: cover;
-  height: 30vw;
-  padding-top: 4em;
+  min-height: 38vw;
+  max-height: 46vw;
+  padding-top: 7vw;
   text-align: center;
   font-size: 80%;
   transition: all 1s;
+  box-sizing: border-box;
 }
 hgroup h1 {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 10vw 0 0;
+}
+hgroup h2 {
+  margin: 0.25em 0;
+}
+hgroup p {
+  margin-bottom: 0;
+}
+
+main > section {
+  box-sizing: border-box;
+  padding: 0 1.25em;
 }
 
 .three-box-flex section {
@@ -99,6 +115,7 @@ hgroup h1 {
   border: 2px solid var(--midGrey);
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: .5em;
 }
 
 summary {
@@ -108,14 +125,13 @@ summary h2 {
   display: inline-block;
   margin: 0;
   width: 90%;
+  font-size: 1em;
 }
 
-
-
 footer {
-  /* use grid layout instead */
+  /* use grid layout instead? */
   margin-top: 1em;
-  height: 8em;
+  height: auto;
   padding: .5em;
   box-sizing: border-box;
   text-align: center;
@@ -124,10 +140,10 @@ footer {
   font-size: .75em;
 }
 footer p {
-  padding: 0 10%;
+  padding: 0 5%;
 }
-.logo-eu {
-  height: 3em;
+footer .logo-eu {
+  height: 3.5em;
 }
 
 @media screen and (min-width: 580px) {
@@ -145,13 +161,13 @@ footer p {
   nav a:hover {
     color: var(--lightGrey);
   }
-  main hgroup {
+  hgroup {
     font-size: 125%;
   }
   hgroup h1 {
     margin-top: 12vw;
   }
-  main hgroup:hover {
+  hgroup:hover {
     background: linear-gradient(to bottom,
       rgba(255, 255, 255, .1),
       rgba(255, 255, 255, .1)),
@@ -165,8 +181,16 @@ footer p {
     justify-content: space-around;
     flex-direction: row;
     justify-items: start;
+    align-items: start;
   }
-  .three-box-flex section {
+ .three-box-flex section {
     width: 30%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .show-big {
+    display: block;
   }
 }
