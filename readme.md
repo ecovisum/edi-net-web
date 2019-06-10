@@ -18,7 +18,7 @@
 ## ToDo (IA and planning):
 
 - [ ] investigate and compare online payments
-- [ ] have fallback for generating hard invoices
+- [ ] have fallback for generating invoices
 - [ ] outline content inventory and store text
 
 ## Content to decide on later
