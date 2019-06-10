@@ -32,6 +32,9 @@ html {
 p {
   line-height: 1.75em
 }
+a {
+  color: inherit;
+}
 
 .three-box-flex {
   display: flex;
