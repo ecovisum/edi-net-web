@@ -19,6 +19,7 @@ html {
   --logoGrey: rgb(88, 89, 91);
   --midGrey: #888;
   --lightGrey: #ddd;
+  scroll-behavior: smooth
 }
 .red { background: var(--logoRed); }
 .green { background: var(--logoGreen ); }
