@@ -6,6 +6,8 @@ ToDo:
 - [ ] flesh our sub-sections and add Graeme's images
 - [ ] add sub-navigation for this SPA
 - [ ] style pricing tiers for mobile sizes
+- [ ] investigate online payments
+- [ ] outline content inventory and store text
 - [x] integrate tiers and style
 - [x] create a white/pale background with magic squares app
 - [x] set up basic above-the-fold content
