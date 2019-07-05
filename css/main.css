@@ -42,14 +42,13 @@ a {
   flex-direction: column;
   align-items: center;
 }
+
 .show-big {
   display: none;
 }
 
 /* BASICS AND MOBILE */
 body {
-  background: url('../images/order4-all-880-trimmed-reverse.png');
-  background-size: cover;
 }
 
 body, main {
@@ -86,21 +85,22 @@ nav a {
   https://stackoverflow.com/q/36679649/123033
 */
 hgroup {
-  background: linear-gradient(to bottom,
-    rgba(255, 255, 255, .72),
-    rgba(255, 255, 255, .72)),
-    url('../images/edi-net-people.jpg');
+  margin-top: 0.5em;
+  background-color: var(--logoBlue);
+  background-image: url('../images/gs/net.png');
+  background-blend-mode: soft-light;
   background-size: cover;
-  min-height: 38vw;
-  max-height: 46vw;
-  padding-top: 7vw;
+  padding: 0.5vw;
   text-align: center;
   font-size: 80%;
-  transition: all 1s;
+  transition: all 0.25s ease-out;
   box-sizing: border-box;
+  color: white;
+  text-shadow: 0px 0px 15px black;
+
 }
 hgroup h1 {
-  margin: 10vw 0 0;
+  margin: 5vw 0 0;
 }
 hgroup h2 {
   margin: 0.25em 0;
@@ -116,6 +116,10 @@ main > section {
 
 .three-box-flex section {
   background: rgba(255, 255, 255, .6);
+  background-image: url('../images/gs/web.png');
+  background-blend-mode: exclusion;
+  background-size: cover;
+  padding: 0;
   width: 90%;
   padding: 1em;
   border: 2px solid var(--midGrey);
@@ -171,18 +175,12 @@ footer .logo-eu {
     font-size: 125%;
   }
   hgroup h1 {
-    margin-top: 12vw;
+    /* margin-top: 12vw; */
   }
   hgroup:hover {
-    background: linear-gradient(to bottom,
-      rgba(255, 255, 255, .1),
-      rgba(255, 255, 255, .1)),
-      url('../images/edi-net-people.jpg');
-    background-size: cover;
-    font-size: 135%;
-    color: #fff;
-    text-shadow: 3px 3px 6px #666;
+    background-color: var(--logoGreen);
   }
+
   .three-box-flex {
     justify-content: space-around;
     flex-direction: row;

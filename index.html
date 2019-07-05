@@ -24,7 +24,6 @@
     <hgroup>
       <h1>Watch your energy use and save!</h1>
       <h2>At-a-glance or in-depth monitoring for everyone</h2>
-      <p class="show-big"><a href="#tierPricing">Browse plans…</a></p>
     </hgroup>
 
     <section>
@@ -117,12 +116,15 @@
         border: 2px solid var(--logoGrey);
         border-radius: 4px;
         overflow: hidden;
+        background-image: url('./images/order4-all-880-trimmed-reverse.png');
+        background-size: 800px;
       }
       li p {
         padding-bottom: 1em;
       }
       li:hover {
-        background: #fff;
+        background-color: #fff;
+        background-blend-mode: exclusion;
       }
       h2 {
         margin: 0;
@@ -131,7 +133,7 @@
         color: var(--lightGrey);
       }
       :host(.highlight) li {
-        background: var(--logoGrey);
+        background-color: var(--logoGrey);
         color: #fff;
       }
       :host(.highlight) li h2 {
