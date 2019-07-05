@@ -1,5 +1,6 @@
 const getTier = (buildings) => {
-  if (buildings < 5) { return tiers[0] }
+  if (buildings == 0) { return zero; }
+  if (buildings < 5) { return tiers[0]; }
   if (buildings >= tiers[tiers.length - 1].buildings) { return tiers[tiers.length - 1] }
   let index = tiers.findIndex(element => {
     return element.buildings > buildings;
@@ -17,13 +18,13 @@ const altShowPrice = ev => {
   let extra = Math.max(0, ev.target.value - tier.buildings);
   altBldgs.innerHTML = ev.target.value;
   altPrice.innerHTML = tier.price;
-  if (extra) {
-    altExtras.innerHTML = ` + €${tier.extra} &times; ${extra} = €${getPrice(ev.target.value)}`
-  } else {
-    altExtras.innerHTML = "";
-  }
+  extraPrice.innerHTML = tier.extra;
+  extraBldgs.innerHTML = extra;
+  finalPrice.innerHTML = getPrice(ev.target.value);
   [...document.querySelectorAll("[id^=altTier]")].forEach(el=>{el.classList.remove('highlight');})
-  document.getElementById(`altTier${tier.id}`).classList.add('highlight');
+  if(tier.id != 0) {
+    document.getElementById(`altTier${tier.id}`).classList.add('highlight');
+  }
 }
 altBuildings.addEventListener("input", altShowPrice);
 

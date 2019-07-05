@@ -35,3 +35,11 @@ const tiers = [
     extra: 5
   },
 ]
+
+const zero = {
+  id: "0",
+  tier: "None",
+  buildings: 0,
+  price: 0,
+  extra: 0
+}
