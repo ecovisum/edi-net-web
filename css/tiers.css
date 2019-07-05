@@ -40,3 +40,14 @@
   cursor: pointer;
   background: var(--logoGrey);
 }
+
+#tierPricing {
+  text-align: center;
+}
+#priceMessage {
+  padding: 1em 0;
+  font-size: 150%;
+}
+#price {
+  font-weight: bold;
+}
