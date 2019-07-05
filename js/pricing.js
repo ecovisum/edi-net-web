@@ -18,7 +18,7 @@ const altShowPrice = ev => {
   altBldgs.innerHTML = ev.target.value;
   altPrice.innerHTML = tier.price;
   if (extra) {
-    altExtras.innerHTML = ` + €${tier.extra} x ${extra} = €${getPrice(ev.target.value)}`
+    altExtras.innerHTML = ` + €${tier.extra} &times; ${extra} = €${getPrice(ev.target.value)}`
   } else {
     altExtras.innerHTML = "";
   }
