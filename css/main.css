@@ -115,9 +115,9 @@ main > section {
 }
 
 .three-box-flex section {
-  background: rgba(255, 255, 255, .6);
+  /* background: rgba(255, 255, 255, .6); */
   background-image: url('../images/gs/web.png');
-  background-blend-mode: exclusion;
+  background-blend-mode: soft-light;
   background-size: cover;
   padding: 0;
   width: 90%;
@@ -126,6 +126,17 @@ main > section {
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: .5em;
+  color: white;
+}
+
+.three-box-flex section:nth-child(1) {
+  background-color: var(--logoRed);
+}
+.three-box-flex section:nth-child(2) {
+  background-color: var(--logoGreen);
+}
+.three-box-flex section:nth-child(3) {
+  background-color: var(--logoBlue);
 }
 
 summary {
