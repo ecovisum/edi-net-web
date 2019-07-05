@@ -21,10 +21,10 @@ html {
   --lightGrey: #ddd;
   scroll-behavior: smooth
 }
-.red { background: var(--logoRed); }
-.green { background: var(--logoGreen ); }
-.blue { background: var(--logoBlue); }
-.grey { background: var(--logoGrey); }
+.red { background-color: var(--logoRed); }
+.green { background-color: var(--logoGreen ); }
+.blue { background-color: var(--logoBlue); }
+.grey { background-color: var(--logoGrey); }
 .red-text { color: var(--logoRed); }
 .green-text { color: var(--logoGreen ); }
 .blue-text { color: var(--logoBlue); }
