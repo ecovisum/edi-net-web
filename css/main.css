@@ -117,26 +117,30 @@ main > section {
 .three-box-flex section {
   /* background: rgba(255, 255, 255, .6); */
   background-image: url('../images/gs/web.png');
-  background-blend-mode: soft-light;
-  background-size: cover;
+  background-blend-mode: lighten;
+  background-size: 2000px;
   padding: 0;
   width: 90%;
   padding: 1em;
-  border: 2px solid var(--midGrey);
+  /* border: 2px solid black; */
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: .5em;
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 .three-box-flex section:nth-child(1) {
   background-color: var(--logoRed);
+  background-position: 0px;
 }
 .three-box-flex section:nth-child(2) {
   background-color: var(--logoGreen);
+  background-position: 200px;
 }
 .three-box-flex section:nth-child(3) {
   background-color: var(--logoBlue);
+  background-position: 400px;
 }
 
 summary {
