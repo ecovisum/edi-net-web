@@ -80,6 +80,13 @@
   </footer>
 
   <template id="my-tiers">
+    <style media="screen">
+      ul {
+        display: flex;
+        width: 100%;
+        padding: 0;
+      }
+    </style>
     <ul>
       <slot name="tiers"><tier-item></tier-item></slot>
     </ul>
@@ -88,50 +95,54 @@
   <template id="simple-tier">
     <style media="screen">
       li {
-        list-style: none;
         margin: 0.25em;
         min-width: 25%;
-        background: var(--lightGrey);
+        background: var(--logoGrey);
         display: inline-block;
-        text-align: center;
+        color: white;
+        box-sizing: border-box;
         transition: 0.25s;
-        border: 2px solid var(--logoGrey);
         border-radius: 4px;
         overflow: hidden;
-        background-image: url('./images/order4-all-880-trimmed-reverse.png');
-        background-size: 800px;
+        background-image: url('./images/gs/web.png');
+        background-blend-mode: overlay;
+        background-size: 1000px;
+        background-position: 500px;
       }
       li p {
         padding-bottom: 1em;
       }
       li:hover {
-        background-color: #fff;
-        background-blend-mode: exclusion;
+        background-color: var(--logoBlue);
       }
       h2 {
         margin: 0;
         padding: 0.25em;
-        background: var(--logoGrey);
+        background: var(--logoRed);
         color: var(--lightGrey);
       }
       :host(.highlight) li {
-        background-color: var(--logoGrey);
-        color: #fff;
+        background-color: var(--logoBlue);
       }
       :host(.highlight) li h2 {
         background: var(--logoGreen);
+      }
+      .padded {
+        padding: 0.5em;
       }
     </style>
 
     <li>
       <h2><slot name="name">Nothing</slot></h2>
-      <p>
-        <strong>€<slot name="price">0</slot></span></strong><br>
-      </p>
-      <p>
-        <span>Includes <slot name="buildings">no</slot> buildings</span><br>
-        <small>+€<slot name="extra">0</slot> per additional building</small>
-      </p>
+      <div class="padded">
+        <h3>
+          <span><slot name="buildings">no</slot> buildings</span>
+        </h3>
+        <p>
+          <strong>€<slot name="price">0</slot></span></strong><br>
+          <small>+€<slot name="extra">0</slot> per additional building</small>
+        </p>
+      </div>
     </li>
   </template>
 
