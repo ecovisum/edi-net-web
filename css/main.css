@@ -80,10 +80,6 @@ nav a {
   text-decoration: none;
 }
 
-/*
-  multiple background images to create an overlay
-  https://stackoverflow.com/q/36679649/123033
-*/
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
@@ -189,13 +185,13 @@ footer .logo-eu {
   hgroup {
     font-size: 125%;
   }
-  hgroup h1 {
-    /* margin-top: 12vw; */
-  }
   hgroup:hover {
     background-color: var(--logoGreen);
   }
-
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
   .three-box-flex {
     justify-content: space-around;
     flex-direction: row;
@@ -211,5 +207,8 @@ footer .logo-eu {
 @media screen and (min-width: 900px) {
   .show-big {
     display: block;
+  }
+  main {
+    font-size: 125%;
   }
 }
