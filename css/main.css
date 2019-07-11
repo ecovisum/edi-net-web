@@ -83,10 +83,11 @@ nav.edi-net a {
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
-  background-image: url('../images/gs/net.png');
+  background-image: url('../images/gs/net.png'), url('../images/gs/face-070.png');
   background-blend-mode: soft-light;
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover, 30vw;
+  background-position: center, -15vw;
   padding: 5vw;
   text-align: center;
   font-size: 80%;
@@ -94,7 +95,6 @@ hgroup {
   box-sizing: border-box;
   color: white;
   text-shadow: 0px 0px 15px black;
-
 }
 hgroup h1, hgroup h2, hgroup h3 {
   margin: 0.25em 0;
@@ -189,7 +189,7 @@ footer .logo-eu {
     font-size: 125%;
   }
   hgroup:hover {
-    background-color: var(--logoGreen);
+    background-position: center, -14vw;
   }
   main {
     max-width: 1400px;
