@@ -112,7 +112,7 @@ main > section > img {
   width: 100%;
   margin: 1em 0;
   border: 3px solid var(--logoGrey);
-  border-radius: 3px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
