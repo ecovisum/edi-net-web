@@ -108,6 +108,14 @@ main > section, .three-box-flex {
   padding: 0 1.5em;
 }
 
+main > section > img {
+  width: 100%;
+  margin: 1em 0;
+  border: 3px solid var(--logoGrey);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
 .three-box-flex section {
   background-image: url('../images/gs/web.png');
   background-blend-mode: lighten;
