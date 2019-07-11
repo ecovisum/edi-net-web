@@ -86,7 +86,8 @@ hgroup {
   background-image: url('../images/gs/net.png');
   background-blend-mode: soft-light;
   background-size: cover;
-  padding: 0.5vw;
+  background-position: center;
+  padding: 5vw;
   text-align: center;
   font-size: 80%;
   transition: all 0.25s ease-out;
