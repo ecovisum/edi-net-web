@@ -105,7 +105,7 @@ hgroup p {
   margin-bottom: 0;
 }
 
-main > section {
+main > section, .three-box-flex {
   box-sizing: border-box;
   padding: 0 1.5em;
 }
@@ -115,11 +115,9 @@ main > section {
   background-blend-mode: lighten;
   background-size: 2000px;
   padding: 0;
-  width: 90%;
   padding: 1em;
   border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: .5em;
+  margin: .5em 0;
   color: white;
   text-shadow: 0px 0px 5px black;
 }
@@ -194,16 +192,6 @@ footer .logo-eu {
     max-width: 1400px;
     margin: auto;
   }
-  .three-box-flex {
-    justify-content: space-around;
-    flex-direction: row;
-    justify-items: start;
-    align-items: start;
-  }
- .three-box-flex section {
-    width: 30%;
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 900px) {
@@ -212,5 +200,18 @@ footer .logo-eu {
   }
   main {
     font-size: 125%;
+  }
+  .three-box-flex {
+    justify-content: space-around;
+    flex-direction: row;
+    justify-items: start;
+    align-items: start;
+  }
+ .three-box-flex section {
+    width: 30%;
+    margin: 0;
+  }
+  .three-box-flex section:nth-child(2) {
+    margin: 0 .5em;
   }
 }
