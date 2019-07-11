@@ -136,6 +136,10 @@ main > section {
   background-color: var(--logoBlue);
   background-position: 400px;
 }
+::selection {
+  background: var(--logoGrey);
+  color: white;
+}
 
 summary {
   outline: none;
