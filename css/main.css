@@ -69,14 +69,14 @@ header {
   height: 2.5em;
   margin-top: 4px;
 }
-nav {
+nav.edi-net {
   display: flex;
   flex-direction: column;
 }
-nav a {
+nav.edi-net a {
   padding: .5em;
   width: 8em;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -95,10 +95,7 @@ hgroup {
   text-shadow: 0px 0px 15px black;
 
 }
-hgroup h1 {
-  margin: 5vw 0 0;
-}
-hgroup h2 {
+hgroup h1, hgroup h2, hgroup h3 {
   margin: 0.25em 0;
 }
 hgroup p {
@@ -171,16 +168,13 @@ footer .logo-eu {
   .logo {
     height: 4em;
   }
-  nav {
+  nav.edi-net {
     flex-direction: row;
   }
-  nav a {
+  nav.edi-net a {
     padding: 2.5em .5em .5em;
     margin: 0 0 0 .5em;
     box-sizing: border-box;
-  }
-  nav a:hover {
-    color: var(--lightGrey);
   }
   hgroup {
     font-size: 125%;
