@@ -79,7 +79,7 @@ nav.edi-net a {
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
-  background-image: url('../images/gs/net.png'), url('../images/gs/face-070.png');
+  background-image: url('../images/net.png'), url('../images/face-070.png');
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover, 30vw;
@@ -117,7 +117,7 @@ main > section > img {
 }
 
 .three-box-flex section {
-  background-image: url('../images/gs/web.png');
+  background-image: url('../images/web.png');
   background-blend-mode: lighten;
   background-size: 2000px;
   padding: 1em;
