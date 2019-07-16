@@ -118,27 +118,44 @@ main > section > img {
 
 .three-box-flex section {
   background-image: url('../images/web.png');
-  background-blend-mode: lighten;
+  /* background-blend-mode: lighten; */
   background-size: 2000px;
   padding: 1em;
+  border: 2px solid var(--logoGrey);
   border-radius: 4px;
   margin: .5em 0;
   color: white;
-  text-shadow: 0px 0px 5px black;
+  /* text-shadow: 0px 0px 5px black; */
 }
-
+.three-box-flex h2 {
+  margin-top: 0.25em;
+}
+.three-box-flex section {
+  background-color: var(--lightGrey);
+  color: var(--logoGrey);
+}
 .three-box-flex section:nth-child(1) {
-  background-color: var(--logoRed);
+  border-color: var(--logoRed);
   background-position: 0px;
 }
+.three-box-flex section:nth-child(1) h2 {
+  color: var(--logoRed);
+}
 .three-box-flex section:nth-child(2) {
-  background-color: var(--logoGreen);
+  border-color: var(--logoGreen);
   background-position: 200px;
 }
+.three-box-flex section:nth-child(2) h2 {
+  color: var(--logoGreen);
+}
 .three-box-flex section:nth-child(3) {
-  background-color: var(--logoBlue);
+  border-color: var(--logoBlue);
   background-position: 400px;
 }
+.three-box-flex section:nth-child(3) h2 {
+  color: var(--logoBlue);
+}
+
 ::selection {
   background: var(--logoGrey);
   color: white;

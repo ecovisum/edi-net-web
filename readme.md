@@ -5,10 +5,11 @@
 - [ ] decide on domain URL for this page
 - [ ] add "browse plans" link jump to slider…
 - [ ] …or bring plans further up
-- [ ] reserve primary colours for highlights
 - [ ] use a photo or more colourful hero image
-- [ ] add conditional comment for IE
 - [ ] run through WebAIM accessibility checker
+- [ ] make plan style more subtle
+- [x] add conditional comment for IE
+- [x] reserve primary colours for highlights
 - [x] fix pricing tiers mobile styles
 - [x] integrate tiers and style
 - [x] create a white/pale background with magic squares app
