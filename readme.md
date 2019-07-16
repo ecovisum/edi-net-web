@@ -2,12 +2,11 @@
 
 ## ToDo (code and style):
 
-- [ ] decide on domain URL for this page
-- [ ] add "browse plans" link jump to slider…
-- [ ] …or bring plans further up
 - [ ] use a photo or more colourful hero image
 - [ ] run through WebAIM accessibility checker
 - [ ] make plan style more subtle
+- [x] add "browse plans" link jump to slider
+- [x] match menu with existing at all sizes
 - [x] add conditional comment for IE
 - [x] reserve primary colours for highlights
 - [x] fix pricing tiers mobile styles
@@ -20,6 +19,7 @@
 
 ## ToDo (IA and planning):
 
+- [ ] decide on domain URL for this page
 - [ ] add/edit remaining prototype content if relevant
 - [ ] decide if sub-sections/sub-nav needed
 - [ ] investigate and compare online payments (Stripe?)
