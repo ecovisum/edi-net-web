@@ -79,8 +79,8 @@ nav.edi-net a {
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
-  background-image: url('../images/net.png'), url('../images/face-070.png');
-  background-blend-mode: soft-light;
+  background-image: url('../images/web.png'), url('../images/face-070.png');
+  background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: cover, 30vw;
   background-position: center, -15vw;
@@ -111,21 +111,19 @@ main > section, .three-box-flex {
 main > section > img {
   width: 100%;
   margin: 1em auto;
-  border: 3px solid var(--logoGrey);
+  border: 2px solid var(--logoGrey);
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .three-box-flex section {
   background-image: url('../images/web.png');
-  /* background-blend-mode: lighten; */
   background-size: 2000px;
   padding: 1em;
   border: 2px solid var(--logoGrey);
   border-radius: 4px;
   margin: .5em 0;
   color: white;
-  /* text-shadow: 0px 0px 5px black; */
 }
 .three-box-flex h2 {
   margin-top: 0.25em;
