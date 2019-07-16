@@ -30,21 +30,23 @@ buildingCount.addEventListener("input", altShowPrice);
 
 const inputEvent = new Event('input');
 
+const buildShadowEl = (elem, t) => {
+  let template = document.getElementById(elem);
+  let templateContent = template.content;
+  const shadowRoot = t.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
+}
+
 class TierItem extends HTMLElement {
   constructor() {
     super();
-    let template = document.getElementById('simple-tier');
-    let templateContent = template.content;
-    const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
+    buildShadowEl('simple-tier', this);
   }
 }
 
 class TierList extends HTMLElement {
   constructor() {
     super();
-    let template = document.getElementById('my-tiers');
-    let templateContent = template.content;
-    const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
+    buildShadowEl('my-tiers', this);
   }
 }
 
@@ -55,8 +57,16 @@ const createSlot = (name, value) => {
   return slot;
 }
 
-customElements.define('tier-item', TierItem)
-customElements.define('tier-list', TierList)
+// optional object makes custom elements easily scalable:
+// const customElems = {
+//   'tier-item': TierItem,
+//   'tier-list': TierList
+// };
+// for (let [key, value] of Object.entries(customElems)) {
+//   customElements.define(key, value);
+// }
+customElements.define('tier-item', TierItem);
+customElements.define('tier-list', TierList);
 
 
 let myList = document.createElement('tier-list');
