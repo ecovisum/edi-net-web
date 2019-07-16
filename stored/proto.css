@@ -1,3 +1,16 @@
+@font-face {
+  font-family: Dosis;
+  src: url(../fonts/Dosis-Medium.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/RobotoSlab-Light.ttf);
+}
+@font-face {
+  font-family: RobotoReg;
+  src: url(../fonts/RobotoSlab-Regular.ttf);
+}
+
 body {
   margin: 0;
 }
@@ -10,7 +23,7 @@ h2, h3, h4, h5, nav {
 }
 header {
   padding: 1em;
-  font-family: "sans-serif";
+  font-family: "Dosis, sans-serif";
   background: hsl(200, 100%, 100%);
   background-image: url("../images/net.png");
   background-blend-mode: exclusion;
@@ -33,14 +46,14 @@ header nav a {
   background-color: #41AD48;
 }
 .blue {
-    background-color: #0070AF;
+  background-color: #0070AF;
 }
 
 header h1 {
   margin-left: 2%;
 }
 p {
-  font-family: "Roboto Slab",helvetica,serif;
+  font-family: RobotoReg,helvetica,serif;
   font-weight: 300;
   line-height: 1.4em;
 }
