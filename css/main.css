@@ -59,10 +59,10 @@ h1, h2, h3, hgroup, nav {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 4px;
+  padding: 0 6px 0 4px;
 }
 .logo {
-  height: 2.5em;
+  height: 4.2em;
   margin-top: 4px;
 }
 nav.edi-net {
@@ -71,9 +71,10 @@ nav.edi-net {
 }
 nav.edi-net a {
   padding: .5em;
-  width: 8em;
+  width: 6.5em;
   color: white;
   text-decoration: none;
+  margin-top: 4px;
 }
 
 hgroup {
@@ -188,16 +189,19 @@ footer .logo-eu {
 }
 
 @media screen and (min-width: 580px) {
-  .logo {
-    height: 4em;
-  }
   nav.edi-net {
     flex-direction: row;
   }
+  header {
+    padding-right: 10px;
+  }
   nav.edi-net a {
-    padding: 2.5em .5em .5em;
-    margin: 0 0 0 .5em;
+    padding: 1.5em .6em .75em;
+    margin: 0 0 0 .75em;
     box-sizing: border-box;
+    height: 3.25em;
+    width: 6.8em;
+    font-size: 1em;
   }
   hgroup {
     font-size: 100%;
@@ -213,11 +217,17 @@ footer .logo-eu {
 }
 
 @media screen and (min-width: 900px) {
+  .logo {
+    height: 5.45em;
+  }
   .show-big {
     display: block;
   }
   header {
-    padding: 0 4px;
+    padding: 0 10px 0 4px;
+  }
+  nav.edi-net a {
+    font-size: 1.3em;
   }
   main {
     font-size: 125%;
