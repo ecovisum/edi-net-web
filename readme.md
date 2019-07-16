@@ -2,12 +2,14 @@
 
 ## ToDo (code and style):
 
-- [ ] edit/move last bit of content from prototype
-- [ ] flesh our sub-sections and add Graeme's images
-- [ ] add sub-navigation for this SPA
-- [ ] fix pricing tiers mobile styles
-- [ ] make "browse plans" link stand out
-- [ ] bring plans further up
+- [ ] decide on domain URL for this page
+- [ ] add "browse plans" link jump to slider…
+- [ ] …or bring plans further up
+- [ ] reserve primary colours for highlights
+- [ ] use a photo or more colourful hero image
+- [ ] add conditional comment for IE
+- [ ] run through WebAIM accessibility checker
+- [x] fix pricing tiers mobile styles
 - [x] integrate tiers and style
 - [x] create a white/pale background with magic squares app
 - [x] set up basic above-the-fold content
@@ -17,14 +19,16 @@
 
 ## ToDo (IA and planning):
 
-- [ ] investigate and compare online payments
-- [ ] have fallback for generating invoices
+- [ ] add/edit remaining prototype content if relevant
+- [ ] decide if sub-sections/sub-nav needed
+- [ ] investigate and compare online payments (Stripe?)
+- [ ] have fallback for generating invoices (Markdownd->PDF)
 - [ ] outline content inventory and store text
 
 ## Content to decide on later
 
-- privacy policy and legal docs
-- company address/phone (and Google map?)
-- Google analytics
-- Dublin Core metadata
-- standard Google SEO stuff
+- [ ] privacy policy and legal docs
+- [ ] company address/phone (and Google map?)
+- [ ] Google analytics
+- [ ] Dublin Core metadata
+- [ ] standard Google SEO stuff
