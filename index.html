@@ -109,45 +109,7 @@
   </template>
 
   <template id="simple-tier">
-    <style media="screen">
-      li {
-        margin: 0.25em;
-        min-width: 25%;
-        background: var(--logoGrey);
-        display: inline-block;
-        color: white;
-        box-sizing: border-box;
-        transition: 0.25s;
-        border-radius: 4px;
-        overflow: hidden;
-        background-image: url('images/web.png');
-        background-blend-mode: overlay;
-        background-size: 1000px;
-        background-position: 500px;
-      }
-      li p {
-        padding-bottom: 1em;
-      }
-      li:hover {
-        background-color: var(--midGrey);
-      }
-      h2 {
-        margin: 0;
-        padding: 0.25em;
-        background: var(--logoRed);
-        font-family: Dosis, sans-serif;
-      }
-      :host(.highlight) li {
-        background-color: var(--logoBlue);
-      }
-      :host(.highlight) li h2 {
-        background: var(--logoGreen);
-      }
-      .padded {
-        padding: 0.5em;
-      }
-    </style>
-
+    <link rel="stylesheet" href="css/simple-tier.css">
     <li>
       <h2><slot name="name">Nothing</slot></h2>
       <div class="padded">
