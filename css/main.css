@@ -228,7 +228,7 @@ footer .logo-eu {
     justify-content: space-around;
     flex-direction: row;
     justify-items: start;
-    align-items: start;
+    align-items: stretch;
   }
  .three-box-flex section {
     width: 30%;
