@@ -31,7 +31,7 @@ buildingCount.addEventListener("input", altShowPrice);
 const inputEvent = new Event('input');
 
 const buildShadowEl = (elem, t) => {
-  let template = document.getElementById(elem);
+  const template = document.getElementById(elem);
   let templateContent = template.content;
   const shadowRoot = t.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
 }
@@ -57,24 +57,25 @@ const createSlot = (name, value) => {
   return slot;
 }
 
-// optional object makes custom elements easily scalable:
-// const customElems = {
+// Object.entries for scalable DRY custom elements:
+// const customElems = new Map(Object.entries({
 //   'tier-item': TierItem,
 //   'tier-list': TierList
-// };
-// for (let [key, value] of Object.entries(customElems)) {
+// }));
+// for (const [key, value] of customElems) {
+//   console.log(key, value)
 //   customElements.define(key, value);
 // }
+
 customElements.define('tier-item', TierItem);
 customElements.define('tier-list', TierList);
 
-
-let myList = document.createElement('tier-list');
-let mySlot = document.createElement('span');
+const myList = document.createElement('tier-list');
+const mySlot = document.createElement('span');
 mySlot.setAttribute('slot', 'tiers');
 
 tiers.forEach(t => {
-  let myItem = document.createElement('tier-item');
+  const myItem = document.createElement('tier-item');
   myItem.id = `altTier${t.id}`
   myItem.appendChild(createSlot('name', t.tier));
   myItem.appendChild(createSlot('buildings', t.buildings));

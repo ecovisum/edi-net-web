@@ -4,7 +4,7 @@
 
 - [ ] use a photo or more colourful hero image
 - [ ] run through WebAIM accessibility checker
-- [ ] make plan style more subtle
+- [ ] make plan style even more subtle
 - [x] add "browse plans" link jump to slider
 - [x] match menu with existing at all sizes
 - [x] add conditional comment for IE
