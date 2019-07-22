@@ -122,20 +122,17 @@ main > section > img {
 }
 
 .three-box-flex section {
+  background-color: var(--lightGrey);
   background-image: url('../images/web.png');
   background-size: 2000px;
   padding: 1em;
   border: 2px solid var(--logoGrey);
   border-radius: 4px;
   margin: .5em 0;
-  color: white;
+  color: var(--logoGrey);
 }
 .three-box-flex h2 {
   margin-top: 0.25em;
-}
-.three-box-flex section {
-  background-color: var(--lightGrey);
-  color: var(--logoGrey);
 }
 .three-box-flex section:nth-child(1) {
   border-color: var(--logoRed);
