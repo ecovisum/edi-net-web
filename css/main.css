@@ -84,8 +84,8 @@ nav.edi-net a {
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
-  background-image: url('../images/web.png'), url('../images/face-070.png');
-  background-blend-mode: hard-light;
+  background-image: url('../images/net.png'), url('../images/face-070.png');
+  background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover, 30vw;
   background-position: center, -15vw;
