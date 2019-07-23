@@ -84,6 +84,9 @@ nav.edi-net a {
 hgroup {
   margin-top: 0.5em;
   background-color: var(--logoBlue);
+  /* just keeping this here because it's nicer: */
+  /* background-image: url('../images/web.png'), url('../images/face-070.png'); */
+  /* background-blend-mode: lighten; */
   background-image: url('../images/net.png'), url('../images/face-070.png');
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
