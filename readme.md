@@ -33,3 +33,5 @@
 - [ ] Google analytics
 - [ ] Dublin Core metadata
 - [ ] standard Google SEO stuff
+
+<!-- git push server master -->
