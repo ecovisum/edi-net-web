@@ -34,4 +34,4 @@
 - [ ] Dublin Core metadata
 - [ ] standard Google SEO stuff
 
-.
+
