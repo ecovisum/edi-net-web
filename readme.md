@@ -19,8 +19,9 @@
 
 ## ToDo (IA and planning):
 
-- [ ] decide on domain URL for this page
+- [x] domain URL is edinet.ecovisum.com
 - [ ] add/edit remaining prototype content if relevant
+- [ ] link to existing research project page
 - [ ] decide if sub-sections/sub-nav needed
 - [ ] investigate and compare online payments (Stripe?)
 - [ ] have fallback for generating invoices (Markdownd->PDF)
