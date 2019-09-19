@@ -91,7 +91,7 @@ hgroup {
   background-blend-mode: hard-light;
   background-repeat: no-repeat;
   background-size: cover, 30vw;
-  background-position: center, -15vw;
+  background-position: left, -15vw;
   padding: 5vw;
   text-align: center;
   font-size: 60%;
