@@ -22,7 +22,7 @@ li:hover {
 h2 {
   margin: 0;
   padding: 0.25em;
-  background: var(--logoRed);
+  background: var(--logoBlue);
   font-family: Dosis, sans-serif;
 }
 :host(.highlight) li {
@@ -33,4 +33,5 @@ h2 {
 }
 .padded {
   padding: 0.5em;
+
 }
