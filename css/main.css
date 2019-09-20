@@ -69,11 +69,11 @@ header {
   height: 4.2em;
   margin-top: 4px;
 }
-nav.edi-net {
+nav {
   display: flex;
   flex-direction: column;
 }
-nav.edi-net a {
+nav a {
   padding: .5em;
   width: 6.5em;
   color: white;
@@ -134,7 +134,7 @@ main > section > img {
   margin: .5em 0;
   color: var(--logoGrey);
 }
-.three-box-flex h2 {
+.three-box-flex h3 {
   margin-top: 0.25em;
 }
 .three-box-flex section:nth-child(1) {
@@ -193,13 +193,13 @@ footer .logo-eu {
 }
 
 @media screen and (min-width: 580px) {
-  nav.edi-net {
+  nav {
     flex-direction: row;
   }
   header {
     padding-right: 10px;
   }
-  nav.edi-net a {
+  nav a {
     padding: 1.5em .6em .75em;
     margin: 0 0 0 .75em;
     box-sizing: border-box;
@@ -230,8 +230,11 @@ footer .logo-eu {
   header {
     padding: 0 10px 0 4px;
   }
-  nav.edi-net a {
+  nav a {
     font-size: 1.3em;
+  }
+  nav a:hover {
+    text-decoration: underline;
   }
   main {
     font-size: 125%;
