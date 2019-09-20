@@ -1,5 +1,8 @@
 # Draft landing page for EDI-Net
 
+- [GitHub pages site](https://daveeveritt.github.io/edi-net-web/)
+- [EDI-Net development site](http://edinet.ecovisum.com/)
+
 ## ToDo (code and style):
 
 - [ ] use a photo or more colourful hero image
