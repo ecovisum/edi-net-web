@@ -1,6 +1,6 @@
 # Draft landing page for EDI-Net
 
-- [GitHub pages site](https://daveeveritt.github.io/edi-net-web/)
+- [GitHub pages site](https://edinet.github.io/edi-net-web/)
 - [EDI-Net development site](http://edinet.ecovisum.com/)
 
 ## ToDo (code and style):
@@ -22,13 +22,13 @@
 
 ## ToDo (IA and planning):
 
-- [x] domain URL is edinet.ecovisum.com
 - [ ] add/edit remaining prototype content if relevant
 - [ ] link to existing research project page
 - [ ] decide if sub-sections/sub-nav needed
 - [ ] investigate and compare online payments (Stripe?)
 - [ ] have fallback for generating invoices (Markdownd->PDF)
 - [ ] outline content inventory and store text
+- [x] domain URL is edinet.ecovisum.com
 
 ## Content to decide on later
 
