@@ -1,39 +1,49 @@
-# Draft landing page for EDI-Net
+# EDI-Net landing page and navigation
 
-- [GitHub pages site](https://edinet.github.io/edi-net-web/)
-- [EDI-Net development site](http://edinet.ecovisum.com/)
+## Existing URLs to arrange
 
-## ToDo (code and style):
+ (main menu links: legacy pages)
 
-- [ ] use a photo or more colourful hero image
-- [ ] run through WebAIM accessibility checker
-- [ ] make plan style even more subtle
-- [x] add "browse plans" link jump to slider
-- [x] match menu with existing at all sizes
-- [x] add conditional comment for IE
-- [x] reserve primary colours for highlights
-- [x] fix pricing tiers mobile styles
-- [x] integrate tiers and style
-- [x] create a white/pale background with magic squares app
-- [x] set up basic above-the-fold content
-- [x] move/create EDI-Net styles to match original
-- [x] copy EDI-Net menu styles exactly
-- [x] fix mobile vertical alignment and spacing
+- this repo: [EDI-Net development site](http://edinet.ecovisum.com/)
+- [EDI-Net main dashboard](https://dashboard.ecovisum.com/p)
 
-## ToDo (IA and planning):
+## Legacy pages (dashboard.edi-net.eu)
+
+(Gather any useful information for new site)
+
+- [EDI-Net project dashboard](https://dashboard.edi-net.eu/p)
+- [EDI-Net project page (submenu: project info)](https://edi-net.eu/en/home.html)
+- [EDI-Net news](https://www.edi-net.eu/en/news.html)
+- [EDI-Net forum (cert expired)](https://discourse.edi-net.eu)
+
+---
+
+## TO DO (IA/planning):
 
 - [ ] add/edit remaining prototype content if relevant
 - [ ] link to existing research project page
 - [ ] decide if sub-sections/sub-nav needed
 - [ ] investigate and compare online payments (Stripe?)
-- [ ] have fallback for generating invoices (Markdownd->PDF)
+- [ ] have fallback for generating invoices (Markdown->PDF)
 - [ ] outline content inventory and store text
-- [x] domain URL is edinet.ecovisum.com
 
-## Content to decide on later
+## TO DO (code/design):
 
-- [ ] privacy policy and legal docs
-- [ ] company address/phone (and Google map?)
-- [ ] Google analytics
+- [ ] use a photo or more colourful hero image
+- [ ] run through WebAIM accessibility checker
+- [ ] make plan style even more subtle
+
+## Pending
+
 - [ ] Dublin Core metadata
 - [ ] standard Google SEO stuff
+- [ ] create and add OGP code/image
+- [ ] add company contact details
+- [ ] make impressum page
+- [ ] privacy policy and legal docs
+- [ ] Google analytics?
+
+---
+
+## NOTES/LINKS
+
