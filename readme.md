@@ -1,13 +1,20 @@
-# EDI-Net landing page and navigation
+# EDI-Net website/dashboard
 
-## Existing URLs to arrange
+Aim: make EDI-Net entry page(s) and dashboard a seamless whole…
 
- (main menu links: legacy pages)
+- [ ] harmonise navigation between static pages with dashboard navigation
+- [ ] remove main links to old EU pages (unless for legacy info?)
+- [ ] gather any useful legacy info to include in new site
+- [ ] add required new static pages (impressum, about, contact, etc.)
+- [ ] update dashboard main navigation to match static pages (part of dashboard interface rewrite)
+- [ ] work out optimum update plan for common elements between static and dashboard pages
 
-- this repo: [EDI-Net development site](http://edinet.ecovisum.com/)
-- [EDI-Net main dashboard](https://dashboard.ecovisum.com/p)
+## Existing URLs
 
-## Legacy pages (dashboard.edi-net.eu)
+- [EDI-Net site](http://edinet.ecovisum.com/) (this repo)
+- [Dashboard site](https://dashboard.ecovisum.com/p)
+
+### Legacy page URLs (dashboard.edi-net.eu)
 
 (Gather any useful information for new site)
 
