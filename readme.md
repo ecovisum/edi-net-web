@@ -1,12 +1,11 @@
 # EDI-Net website/dashboard
 
-Aim: make EDI-Net entry page(s) and dashboard a seamless whole…
+EDI-Net landing page to integrate with dashboard as a seamless whole
 
 - [ ] harmonise navigation between static pages with dashboard navigation
-- [ ] remove main links to old EU pages (unless for legacy info?)
-- [ ] gather any useful legacy info to include in new site
+- [ ] gather any useful legacy info from old EU pages and add to new site
 - [ ] add required new static pages (impressum, about, contact, etc.)
-- [ ] update dashboard main navigation to match static pages (part of dashboard interface rewrite)
+- [ ] update dashboard main navigation to match static pages (with dashboard interface rewrite)
 - [ ] work out optimum update plan for common elements between static and dashboard pages
 
 ## New URLs
@@ -45,5 +44,6 @@ Aim: make EDI-Net entry page(s) and dashboard a seamless whole…
 
 ---
 
-## NOTES/LINKS
+## DONE
 
+- [x] remove main links to old EU pages
